@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components"
+import FlashCards from "./components/FlashCards"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App(){
+    return(
+        <Containe> 
+            <FlashCards/>
+        </Containe>
+    )
 }
-
-export default App;
+const Containe = styled.div`
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+`
