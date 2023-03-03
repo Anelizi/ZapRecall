@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import imagem from "../assets/logo.png";
-import PerguntaFechada from "./PerguntaFechada"
+import PerguntaFechada from "./PerguntaFechada";
+import PerguntaAberta from "./PerguntaAberta";
+import Resposta from "./Resposta";
 
 export default function FlashCards(){
     return(
@@ -9,14 +11,16 @@ export default function FlashCards(){
                 <img src={imagem}/>
                 <h1>ZapRecall</h1>
             </Logo>
-            <PerguntaFechada/>
+            {/* <PerguntaFechada/> */}
+            {/* <PerguntaAberta/> */}
+            {/* <Resposta/> */}
         </Containe>
     )
 }
 
 const Containe = styled.div`
-    height: 100%;
-    width: 380px;
+    width: 35vw;
+    height: 100vh;
     background-color: #FB6B6B;
 `
 

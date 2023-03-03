@@ -12,8 +12,6 @@ export default function PerguntaFechada(){
     )
 }
 const Containe = styled.div`
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     font-family: 'Recursive', sans-serif;
@@ -40,4 +38,5 @@ const Icon = styled(BsCaretRight)`
     width: 25px;
     height: 25px;
     margin-right: 15px;
+    cursor: pointer;
 `
