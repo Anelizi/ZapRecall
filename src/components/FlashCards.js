@@ -5,19 +5,21 @@ import Resposta from "./Resposta";
 import { useState } from "react";
 
 export default function FlashCards({ numero }) {
-  const [perguntaFechada, setPerguntaFechada] = useState(true);
-  const [perguntaAberta, setPerguntaAberta] = useState(false);
-  const [resposta, setResposta] = useState(false);
+  const [cardAtual, setCardAtual] = useState("card1")
 
-  return (
+  function mudarCard(card) {
+    setCardAtual(card)
+  }
+
+  return(
     <Containe>
-      <PerguntaFechada numero={numero} />
-      {/* <PerguntaAberta /> */}
-      {/* <Resposta /> */}
+      {cardAtual === "card1" &&(<PerguntaFechada mudarCard={mudarCard} numero={numero}/>)}
+      {cardAtual === "card2" &&(<PerguntaAberta mudarCard={mudarCard}/>)}
+      {cardAtual === "card3" &&(<Resposta mudarCard={mudarCard}/>)}
     </Containe>
-  );
-}
+  )
 
+}
 const Containe = styled.div`
   margin-bottom: 20px;
 `;

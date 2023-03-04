@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import { GrRotateRight } from "react-icons/gr";
 
-export default function PerguntaAberta() {
+export default function PerguntaAberta({ mudarCard}) {
+
   return (
     <Containe>
       <Style>
         <h3>O que é JSX?</h3>
-        <Icon />
+
+        <button onClick={() => mudarCard("card3")}>
+          <Icon />
+        </button>
       </Style>
     </Containe>
   );
@@ -26,6 +30,14 @@ const Style = styled.div`
   display: flex;
   justify-content: space-between;
   color: #333333;
+  button {
+    border: none;
+    background-color: #ffffd4;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 1px 1px 0;
+  }
   h3 {
     font-size: 16px;
     font-weight: 700;
@@ -33,11 +45,8 @@ const Style = styled.div`
   }
 `;
 const Icon = styled(GrRotateRight)`
-  position: absolute;
   width: 25px;
   height: 25px;
-  bottom: 0;
-  right: 0;
   margin: 0 10px 10px 0;
   cursor: pointer;
 `;

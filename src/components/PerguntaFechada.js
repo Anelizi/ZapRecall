@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { BsCaretRight } from "react-icons/bs";
 
-export default function PerguntaFechada({perguntaFechada, setPerguntaFechada, numero}) {
+export default function PerguntaFechada({mudarCard, numero}) {
 
   return (
     <Containe>
@@ -9,7 +9,7 @@ export default function PerguntaFechada({perguntaFechada, setPerguntaFechada, nu
         <>
           <h3>Pergunta {numero}</h3>
         </>
-        <button onClick="">
+        <button onClick={() => mudarCard("card2")}>
           <Icon/>
         </button>
       </Style>
@@ -34,6 +34,7 @@ const Style = styled.div`
   button{
     border: none;
     background-color: #ffffff;
+    margin-right: 15px;
   }
   h3 {
     font-size: 16px;
@@ -46,6 +47,5 @@ const Style = styled.div`
 const Icon = styled(BsCaretRight)`
   width: 25px;
   height: 25px;
-  margin-right: 15px;
   cursor: pointer;
 `;
