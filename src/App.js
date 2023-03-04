@@ -1,16 +1,16 @@
-import styled from "styled-components"
-import FlashCards from "./components/FlashCards"
+import styled from "styled-components";
+import Card from "./components/Card";
 
-export default function App(){
-    return(
-        <Containe> 
-            <FlashCards/>
-        </Containe>
-    )
+export default function App() {
+  return (
+    <Containe>
+      <Card/>
+    </Containe>
+  );
 }
 const Containe = styled.div`
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+`;
