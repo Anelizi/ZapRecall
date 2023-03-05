@@ -1,13 +1,11 @@
 import styled from "styled-components";
 import { GrRotateRight } from "react-icons/gr";
 
-export default function PerguntaAberta({ mudarCard, question}) {
-
+export default function PerguntaAberta({ mudarCard, question }) {
   return (
     <Containe>
       <Style>
         <h3>{question}</h3>
-
         <button onClick={() => mudarCard("card3")}>
           <Icon />
         </button>

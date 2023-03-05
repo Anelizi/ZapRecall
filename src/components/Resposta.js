@@ -1,14 +1,43 @@
 import styled from "styled-components";
 
-export default function Resposta({mudarCard, answer}) {
+export default function Resposta({
+  mudarCard,
+  answer,
+  setPlay,
+  setNaoLembrei,
+  setQuaseLembrei,
+  setZap,
+  setRiscaPalavra,
+}) {
+  function naoLembrei() {
+    mudarCard("card1");
+    setPlay(false);
+    setNaoLembrei(true);
+    setRiscaPalavra(true);
+  }
+
+  function quaseLembrei() {
+    mudarCard("card1");
+    setPlay(false);
+    setQuaseLembrei(true);
+    setRiscaPalavra(true);
+  }
+
+  function zap() {
+    mudarCard("card1");
+    setPlay(false);
+    setZap(true);
+    setRiscaPalavra(true);
+  }
+
   return (
     <Containe>
       <Style>
         <h3>{answer}</h3>
         <div>
-          <button onClick={() => mudarCard("card1")}>Não lembrei</button>
-          <button onClick={() => mudarCard("card1")}>Quase não lembrei</button>
-          <button onClick={() => mudarCard("card1")}>Zap!</button>
+          <button onClick={naoLembrei}>Não lembrei</button>
+          <button onClick={quaseLembrei}>Quase não lembrei</button>
+          <button onClick={zap}>Zap!</button>
         </div>
       </Style>
     </Containe>
@@ -22,7 +51,7 @@ const Containe = styled.div`
 const Style = styled.div`
   position: relative;
   width: 300px;
-  height: 131px;
+  height: auto;
   background-color: #ffffd4;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
