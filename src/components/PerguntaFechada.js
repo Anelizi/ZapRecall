@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { BsCaretRight } from "react-icons/bs";
+import { BsCaretRight, BsFillCheckCircleFill, BsFillQuestionCircleFill, BsFillXCircleFill, } from "react-icons/bs";
+
 
 export default function PerguntaFechada({mudarCard, numero}) {
 

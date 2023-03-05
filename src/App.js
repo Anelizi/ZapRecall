@@ -1,7 +1,9 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Card from "./components/Card";
 
 export default function App() {
+
   return (
     <Containe>
       <Card/>
@@ -10,7 +12,7 @@ export default function App() {
 }
 const Containe = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 100vh auto;
   display: flex;
   justify-content: center;
 `;

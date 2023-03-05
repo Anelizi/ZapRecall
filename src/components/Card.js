@@ -2,6 +2,7 @@ import styled from "styled-components";
 import imagem from "../assets/logo.png";
 import FlashCards from "./FlashCards"
 import cards from "../cards"
+import Footer from "./Footer";
 
 export default function Card(){
 
@@ -11,14 +12,17 @@ export default function Card(){
                 <img src={imagem} />
                 <h1>ZapRecall</h1>
             </Logo>
-            {cards.map((c) => (<FlashCards numero={cards.indexOf(c)+1} key={c.question}/>))}
+            {cards.map((c) => (<FlashCards key={c.question} numero={cards.indexOf(c)+1} question={c.question} answer={c.answer}/>))}
+            <Footer/>
         </Containe>
     )
 }
 
 const Containe = styled.div`
   width: 380px;
-  height: 130vh;
+  height:  100vh auto;
+  margin-bottom: 70px;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.5);
   background-color: #fb6b6b;
 `;
 

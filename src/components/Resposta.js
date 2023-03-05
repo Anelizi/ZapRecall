@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export default function Resposta({mudarCard}) {
+export default function Resposta({mudarCard, answer}) {
   return (
     <Containe>
       <Style>
-        <h3>JSX é uma sintaxe para escrever HTML dentro do JS</h3>
+        <h3>{answer}</h3>
         <div>
           <button onClick={() => mudarCard("card1")}>Não lembrei</button>
           <button onClick={() => mudarCard("card1")}>Quase não lembrei</button>
