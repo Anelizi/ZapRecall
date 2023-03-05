@@ -8,12 +8,15 @@ export default function Resposta({
   setQuaseLembrei,
   setZap,
   setRiscaPalavra,
+  cardsRespondido,
+  setCardsRespondido
 }) {
   function naoLembrei() {
     mudarCard("card1");
     setPlay(false);
     setNaoLembrei(true);
     setRiscaPalavra(true);
+    setCardsRespondido(cardsRespondido + 1)
   }
 
   function quaseLembrei() {
@@ -21,6 +24,7 @@ export default function Resposta({
     setPlay(false);
     setQuaseLembrei(true);
     setRiscaPalavra(true);
+    setCardsRespondido(cardsRespondido + 1)
   }
 
   function zap() {
@@ -28,6 +32,7 @@ export default function Resposta({
     setPlay(false);
     setZap(true);
     setRiscaPalavra(true);
+    setCardsRespondido(cardsRespondido + 1)
   }
 
   return (

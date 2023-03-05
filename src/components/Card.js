@@ -3,8 +3,11 @@ import imagem from "../assets/logo.png";
 import FlashCards from "./FlashCards";
 import cards from "../cards";
 import Footer from "./Footer";
+import { useState } from "react";
 
 export default function Card() {
+  const [cardsRespondido, setCardsRespondido] = useState(0);
+
   return (
     <Containe>
       <Logo>
@@ -17,9 +20,11 @@ export default function Card() {
           numero={cards.indexOf(c) + 1}
           question={c.question}
           answer={c.answer}
+          setCardsRespondido={setCardsRespondido}
+          cardsRespondido={cardsRespondido}
         />
       ))}
-      <Footer />
+      <Footer cardsRespondido={cardsRespondido} numeroCards={cards.length}/>
     </Containe>
   );
 }

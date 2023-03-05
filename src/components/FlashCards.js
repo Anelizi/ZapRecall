@@ -4,7 +4,7 @@ import PerguntaAberta from "./PerguntaAberta";
 import Resposta from "./Resposta";
 import { useState } from "react";
 
-export default function FlashCards({ numero, question, answer }) {
+export default function FlashCards({ numero, question, answer, cardsRespondido, setCardsRespondido }) {
   const [cardAtual, setCardAtual] = useState("card1");
   const [play, setPlay] = useState(true);
   const [naoLembrei, setNaoLembrei] = useState(false);
@@ -41,6 +41,8 @@ export default function FlashCards({ numero, question, answer }) {
           setQuaseLembrei={setQuaseLembrei}
           setZap={setZap}
           setRiscaPalavra={setRiscaPalavra}
+          cardsRespondido={cardsRespondido}
+          setCardsRespondido={setCardsRespondido}
         />
       )}
     </Containe>
