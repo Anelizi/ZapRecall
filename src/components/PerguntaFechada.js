@@ -36,7 +36,7 @@ export default function PerguntaFechada({
           {play ? <PlayIcon /> : ""}
           {naoLembrei ? <XIcon data-test="no-icon" /> : ""}
           {quaseLembrei ? <QuestionIcon data-test="partial-icon" /> : ""}
-          {zap ? <CheckIconIcon data-test="zap-icon" /> : ""}
+          {zap ? <CheckIcon data-test="zap-icon" /> : ""}
         </button>
       </Style>
     </Containe>
@@ -62,15 +62,13 @@ const Style = styled.div`
     margin-right: 15px;
   }
 `;
-
 const PlayIcon = styled(BsCaretRight)`
   width: 25px;
   height: 25px;
   cursor: pointer;
   color: #333333;
 `;
-
-const CheckIconIcon = styled(BsFillCheckCircleFill)`
+const CheckIcon = styled(BsFillCheckCircleFill)`
   width: 25px;
   height: 25px;
   color: #2fbe34;

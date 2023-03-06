@@ -28,7 +28,6 @@ export default function Card() {
     </Containe>
   );
 }
-
 const Containe = styled.div`
   width: 380px;
   height: 100vh auto;
@@ -36,7 +35,6 @@ const Containe = styled.div`
   box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.5);
   background-color: #fb6b6b;
 `;
-
 const Logo = styled.div`
   display: flex;
   justify-content: center;
