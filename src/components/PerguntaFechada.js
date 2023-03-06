@@ -24,17 +24,19 @@ export default function PerguntaFechada({
           naoLembrei={naoLembrei}
           quaseLembrei={quaseLembrei}
           zap={zap}
+          data-test="flashcard-text"
         >
           Pergunta {numero}
         </H3>
         <button
           onClick={() => mudarCard("card2")}
           disabled={riscaPalavra ? true : false}
+          data-test="play-btn"
         >
           {play ? <PlayIcon /> : ""}
-          {naoLembrei ? <XIcon /> : ""}
-          {quaseLembrei ? <QuestionIcon /> : ""}
-          {zap ? <CheckIconIcon /> : ""}
+          {naoLembrei ? <XIcon data-test="no-icon" /> : ""}
+          {quaseLembrei ? <QuestionIcon data-test="partial-icon" /> : ""}
+          {zap ? <CheckIconIcon data-test="zap-icon" /> : ""}
         </button>
       </Style>
     </Containe>

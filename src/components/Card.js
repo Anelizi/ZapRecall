@@ -24,7 +24,7 @@ export default function Card() {
           cardsRespondido={cardsRespondido}
         />
       ))}
-      <Footer cardsRespondido={cardsRespondido} numeroCards={cards.length}/>
+      <Footer cardsRespondido={cardsRespondido} numeroCards={cards.length} />
     </Containe>
   );
 }

@@ -5,8 +5,8 @@ export default function PerguntaAberta({ mudarCard, question }) {
   return (
     <Containe>
       <Style>
-        <h3>{question}</h3>
-        <button onClick={() => mudarCard("card3")}>
+        <h3 data-test="flashcard-text">{question}</h3>
+        <button onClick={() => mudarCard("card3")} data-test="turn-btn">
           <Icon />
         </button>
       </Style>

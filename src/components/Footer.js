@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export default function Footer({cardsRespondido, numeroCards}) {
+export default function Footer({ cardsRespondido, numeroCards }) {
   return (
     <Containe>
-      <p>{cardsRespondido}/{numeroCards} concluídos</p>
+      <p data-test="footer">
+        {cardsRespondido}/{numeroCards} concluídos
+      </p>
     </Containe>
   );
 }

@@ -9,14 +9,14 @@ export default function Resposta({
   setZap,
   setRiscaPalavra,
   cardsRespondido,
-  setCardsRespondido
+  setCardsRespondido,
 }) {
   function naoLembrei() {
     mudarCard("card1");
     setPlay(false);
     setNaoLembrei(true);
     setRiscaPalavra(true);
-    setCardsRespondido(cardsRespondido + 1)
+    setCardsRespondido(cardsRespondido + 1);
   }
 
   function quaseLembrei() {
@@ -24,7 +24,7 @@ export default function Resposta({
     setPlay(false);
     setQuaseLembrei(true);
     setRiscaPalavra(true);
-    setCardsRespondido(cardsRespondido + 1)
+    setCardsRespondido(cardsRespondido + 1);
   }
 
   function zap() {
@@ -32,17 +32,23 @@ export default function Resposta({
     setPlay(false);
     setZap(true);
     setRiscaPalavra(true);
-    setCardsRespondido(cardsRespondido + 1)
+    setCardsRespondido(cardsRespondido + 1);
   }
 
   return (
     <Containe>
       <Style>
-        <h3>{answer}</h3>
+        <h3 data-test="flashcard-text">{answer}</h3>
         <div>
-          <button onClick={naoLembrei}>Não lembrei</button>
-          <button onClick={quaseLembrei}>Quase não lembrei</button>
-          <button onClick={zap}>Zap!</button>
+          <button onClick={naoLembrei} data-test="no-btn">
+            Não lembrei
+          </button>
+          <button onClick={quaseLembrei} data-test="partial-btn">
+            Quase não lembrei
+          </button>
+          <button onClick={zap} data-test="zap-btn">
+            Zap!
+          </button>
         </div>
       </Style>
     </Containe>
